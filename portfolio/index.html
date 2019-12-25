@@ -23,6 +23,7 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<script src="./js/jquery-3.4.1.min.js"></script>
 	</head>
 	<body>
 		<p id ="demo" style="position : absolute; top:10px;right:10px;font-family: 'Lato',sans-serif;">00:00</p>
@@ -30,8 +31,8 @@
 			<div class="slides">
 				<!-- 分隔線 -->
 				<section>
-					<h1>My presentation</h1>
-					<h2>Philippe Sihabouth<h2>
+					<h1>Ratatouille</h1>
+					<h4>Philippe Sihabouth<h4>
 					<p id="myid"></p>
 					
 					<!--<p style="font-size: small;">-->
@@ -52,39 +53,49 @@
 				</section>
 				
 				<!-- 分隔線 -->
-				<section>Slide 1
+				<section>
+					<h3>Slide 1 - Objective 「目標」</h3>
+					<p id="audio1">It's the story of Remy who wanted to be a chef and Alfredo who is bad at cooking.</p>
+					<iframe src = "./images/man.svg" scrolling="no" frameborder="0" width="400" height="300" style="margin-top: 20px"></iframe>
 				</section>
 
 				<!-- 分隔線 -->
-				<section>Slide 2
+				<section>
+					<h3>Slide 2 - Obstacle 「阻礙」</h3>
+					<p id="audio2">The problem is that Remy is a rat and can't cook in a kitchen.</p>
+					<iframe src = "./images/rat.svg" scrolling="no" frameborder="0" width="400" height="300" style="margin-top: 20px"></iframe>
 				</section>
 
 				<!-- 分隔線 -->
-				<section>Slide 3
-					<section>
-					<p>
-						<img src="images/philippe_pastry.png" />
-					</p>
-					</section>
-					<section>Mango Cake
-					<p>
-						<img src="images/cake3.jpeg" />
-					</p>
-					</section>
-					<section>Strawberry Cake
-					<p>
-						<img src="images/cake1.JPG" />
-					</p>
-					</section>
-					<section>Chocolate Cake
-					<p>
-						<img src="images/cake2.jpeg" />
-					</p>
-					</section>
+				<section>
+					<h3>Slide 3 - Make all-out Effort 「努力」</h3>
+					<p id="audio3">So Remy and Alfredo started helping each other. Remy would hide in Alfredo's hat so he could go to the kitchen. </p>
+					<iframe src = "./images/cooker.svg" scrolling="no" frameborder="0" width="400" height="300" style="margin-top: 20px"></iframe>
 				</section>
 
 				<!-- 分隔線 -->
-				<section>Slide 4
+				<section>
+					<h3>Slide 4 - Result 「結果」</h3>
+					<p id="audio4">Thanks to their collaboration, the two have succeeded in making excellent dishes that have been recognized by culinary critics.</p>
+					<iframe src = "./images/high-five.svg" scrolling="no" frameborder="0" width="400" height="300" style="margin-top: 20px"></iframe>
+				</section>
+
+				<section>
+					<h3>Slide 5 - Accident 「意外」</h3>
+					<p id="audio5">But the day where one of the world's greatest food critics comes, Alfredo decides to show the kitchen staff that he is working with Remy the rat. The kitchen team took this discovery badly and decides to leave, leaving Alfredo and Remy alone.</p>
+					<iframe src = "./images/alone.svg" scrolling="no" frameborder="0" width="300" height="300" style="margin-top: 20px"></iframe>
+				</section>
+
+				<section>
+					<h3>Slide 6 - Turn Around 「轉彎」</h3>
+					<p id="audio6">While Remy and Alfredo were alone in the kitchen, Remy's family, who were also rats, began to invade the kitchen and help the two characters serve one of the world's greatest food critics.</p>
+					<iframe src = "./images/help.svg" scrolling="no" frameborder="0" width="300" height="200" style="margin-top: 20px"></iframe>
+				</section>
+
+				<section>
+					<h3>Slide 7 - Ending 「結局」</h3>
+					<p id="audio7">The food critic liked very much the dish made by Remy and Alfredo and decides to recognize Remy as a chef even if he is a rat.</p>
+					<iframe src = "./snapsvg/rat.html" scrolling="no" frameborder="0" width="300" height="300" style="margin-top: 20px"></iframe>
 				</section>
 
 				<!-- 分隔線 -->
@@ -92,17 +103,59 @@
 					<h1>The End</h1>
 				</section>
 
+				<section>
+					<img id='tiger' style="border:0px green dashed; width: 30%; border-radius: 5%;" src="./images/mouse.svg"><br>
+
+					<button id="btn1">Animate fadeIn fadeOut</button>
+					<button id="btn2">Animate CSS border-radius 50%</button>
+					<button id="btn3">Animate CSS border-radius 5%</button>
+
+					<button id="btn4">Animate CSS opacity 0.95</button>					
+					<button id="btn5">Animate CSS opacity 0.20</button>					
+
+
+					<script>
+						//$('#tiger').hide().fadeIn(5000).fadeOut(5000).fadeIn(5000);
+						//$('#tiger').animate({'border-radius': '50%'}, 1500);
+
+						$("#btn1").click(function(){
+						    $("#tiger").hide().fadeIn(1000).fadeOut(1000).fadeIn(1000);
+						});
+
+						$("#btn2").click(function(){
+						    $("#tiger").animate({'border-radius': '50%'});
+						});
+
+						$("#btn3").click(function(){
+						    $("#tiger").animate({'border-radius': '5%'});
+						});
+
+						$("#btn4").click(function(){
+						    $("#tiger").animate({opacity: 0.95});
+						});
+
+						$("#btn5").click(function(){
+						    $("#tiger").animate({opacity: 0.20});
+						});
+
+					</script>				
+				</section>
+
+
 				<!-- 分隔線 -->
 				<section>
-					<h3 style="margin-top: -200px">Acknowledgement</h3>
+					<h3 style="margin-top: -200px">More foods?</h3>
 					<ul>
-						<li>Special thanks to ...</li>
-						<li>Crediting ...</li>
-						<li>Image courtesy of 
-							<a style="background-color:black;color:white;text-decoration:none;padding:4px 6px;font-family:-apple-system, BlinkMacSystemFont, &quot;San Francisco&quot;, &quot;Helvetica Neue&quot;, Helvetica, Ubuntu, Roboto, Noto, &quot;Segoe UI&quot;, Arial, sans-serif;font-size:12px;font-weight:bold;line-height:1.2;display:inline-block;border-radius:3px" href="https://unsplash.com/@amosbarzeev?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" target="_blank" rel="noopener noreferrer" title="Download free do whatever you want high-resolution photos from Amos Bar-Zeev"><span style="display:inline-block;padding:2px 3px"><svg xmlns="http://www.w3.org/2000/svg" style="height:12px;width:auto;position:relative;vertical-align:middle;top:-2px;fill:white" viewBox="0 0 32 32"><title>unsplash-logo</title><path d="M10 9V0h12v9H10zm12 5h10v18H0V14h10v9h12v-9z"></path></svg></span><span style="display:inline-block;padding:2px 3px">Amos Bar-Zeev</span></a>
-						</li>
-						<li>Photo by Amos Bar-Zeev on Unsplash</li>
-						<li><a href="https://unsplash.com/photos/hVk6pIFbW9o">Nahariyya, Israel</a></li>
+						<li>@Cakilippe on instagram</li>
+						<img src = "./images/cakilippe.png" scrolling="no" frameborder="0" width="500" height="500" style="margin-top: 20px"></img>
+					</ul>
+				</section>
+
+				<section>
+					<h3 style="margin-top: -200px">More foods?</h3>
+					<ul>
+						<li>@philippesihabouth on instagram</li>
+						<img src = "./images/philippesihabouth.png" scrolling="no" frameborder="0" width="500" height="500" style="margin-top: 20px"></img>
 					</ul>
 				</section>
 
@@ -120,6 +173,9 @@
 						<li> I love making cakes</li>
 						<li id="id1">My favorite color is <input size="12" id="colorinput" value="SkyBlue" type="text" name="frame" style="font-size: 30pt"></li>
 					</ul>
+				</section>
+				<section>
+					<iframe src = "./score.html" scrolling="no" frameborder="0" width="1200" height="900" style="margin-top: 20px"></iframe>
 				</section>
 				<!-- 分隔線 -->
 			</div>
@@ -190,8 +246,8 @@
 				//console.log(d2);
 				minutes = Math.floor((d2-d1)/1000/60);
 				seconds = Math.floor((d2-d1)/1000%60);
-				if(minutes >= 1){
-					fontSize = 30 +5*(seconds+60*(minutes-1));
+				if(minutes >= 3){
+					fontSize = 50; //30 +5*(seconds+60*(minutes-1));
 					document.getElementById("demo").style.color="crimson";
 					document.getElementById("demo").style.fontSize = fontSize + "pt";
 				}
@@ -204,7 +260,79 @@
 				document.getElementById("demo").innerHTML='0'+minutes+':'+seconds;
 			},100);
 
+		</script>
 
+		<script>
+
+			var audio1 = document.createElement('audio');
+			audio1.setAttribute('src','./mp3/audio1.mp3');
+			$(document).on('mouseenter','#audio1',function(){
+				audio1.play();
+			});
+
+			$(document).on('mouseleave','#audio1',function(){
+				audio1.pause();
+			});
+
+			var audio2 = document.createElement('audio');
+			audio2.setAttribute('src','./mp3/audio2.mp3');
+			$(document).on('mouseenter','#audio2',function(){
+				audio2.play();
+			});
+
+			$(document).on('mouseleave','#audio2',function(){
+				audio2.pause();
+			});
+
+			var audio3 = document.createElement('audio');
+			audio3.setAttribute('src','./mp3/audio3.mp3');
+			$(document).on('mouseenter','#audio3',function(){
+				audio3.play();
+			});
+
+			$(document).on('mouseleave','#audio3',function(){
+				audio3.pause();
+			});
+
+			var audio4 = document.createElement('audio');
+			audio4.setAttribute('src','./mp3/audio4.mp3');
+			$(document).on('mouseenter','#audio4',function(){
+				audio4.play();
+			});
+
+			$(document).on('mouseleave','#audio4',function(){
+				audio4.pause();
+			});
+
+			var audio5 = document.createElement('audio');
+			audio5.setAttribute('src','./mp3/audio5.mp3');
+			$(document).on('mouseenter','#audio5',function(){
+				audio5.play();
+			});
+
+			$(document).on('mouseleave','#audio5',function(){
+				audio5.pause();
+			});
+
+			var audio6 = document.createElement('audio');
+			audio6.setAttribute('src','./mp3/audio6.mp3');
+			$(document).on('mouseenter','#audio6',function(){
+				audio6.play();
+			});
+
+			$(document).on('mouseleave','#audio6',function(){
+				audio6.pause();
+			});
+
+			var audio7 = document.createElement('audio');
+			audio7.setAttribute('src','./mp3/audio7.mp3');
+			$(document).on('mouseenter','#audio7',function(){
+				audio7.play();
+			});
+
+			$(document).on('mouseleave','#audio7',function(){
+				audio7.pause();
+			});
 
 
 		</script>

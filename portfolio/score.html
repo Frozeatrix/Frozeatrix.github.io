@@ -1,0 +1,151 @@
+
+<!-- https://www.w3schools.com/howto/howto_js_display_checkbox_text.asp -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  table {
+    width:80%;
+    margin: 10px;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;
+  }
+  table#t01 tr:nth-child(even) {
+    background-color: #eee;
+  }
+  table#t01 tr:nth-child(odd) {
+   background-color: #fff;
+  }
+  table#t01 th {
+    background-color: #888;
+    color: white;
+  }
+</style>
+</head>
+<body>
+
+<h1>Student Self Grading Sheet:</h1>
+
+<!--
+<span id="kitty"></span>
+<h2 id="text" style="display:none"></h2>
+<span id="pass"></span>
+-->
+
+<!--
+<li>10% <input type="checkbox" id="myCheck0"  onclick="myFunction()"> Include Year.Month.Date in the title page! </li>
+<li>10% <input type="checkbox" id="myCheck1"  onclick="myFunction()"> Include (Weekday) in the title page! </li>
+<li>10% <input type="checkbox" id="myCheck2"  onclick="myFunction()"> Include a timer at the upper right corner! </li>
+<li>10% <input type="checkbox" id="myCheck3"  onclick="myFunction()"> Include a personal photo instead of others! </li>
+<li>10% <input type="checkbox" id="myCheck4"  onclick="myFunction()"> Use the 7-step formula (objective, obstacle, efforts, result, accident, trun around, ending) to tell the story! </li>
+<li>10% <input type="checkbox" id="myCheck5"  onclick="myFunction()"> Include at least one figure in every page! </li>
+<li>10% <input type="checkbox" id="myCheck6"  onclick="myFunction()" checked> </li>
+<li>10% <input type="checkbox" id="myCheck7"  onclick="myFunction()" checked> </li>
+<li>10% <input type="checkbox" id="myCheck8"  onclick="myFunction()" checked> </li>
+<li>10% <input type="checkbox" id="myCheck9"  onclick="myFunction()" checked> </li>
+-->
+
+
+<table id="t01">
+  <tr>
+    <th>Total Score</th> <th> % </th>    <th>CheckBox</th>     <th>Requirement</th> <th>Evaluation</th>
+  </tr>
+
+  <tr><td rowspan="10" id="text"></td> <td> 10% </td><td><input type="checkbox" id="myCheck0"  onclick="myFunction()"></td><td> Include Year.Month.Date in the title page! </td><td rowspan="10" id="kitty"></td></tr>
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck1"  onclick="myFunction()"></td><td> Include (Weekday) in the title page! </td></tr>
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck2"  onclick="myFunction()"></td><td> Include a timer at the upper right corner! </td></tr>
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck3"  onclick="myFunction()"></td><td> Include a personal photo instead of others! </td></tr>
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck4"  onclick="myFunction()"></td><td> Use the 7-step formula (objective, obstacle, efforts, result, accident, trun around, ending) to tell the story! </td></tr>
+
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck5"  onclick="myFunction()"></td><td> Include at least one figure in every page! </td></tr>
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck6"  onclick="myFunction()"></td> <td> Text to speech! </td></tr>
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck7"  onclick="myFunction()"></td> <td> jQuery fadeIn(), fadeOut()! </td></tr>
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck8"  onclick="myFunction()"></td> <td> jQuery animating CSS properties! </td></tr>
+  <tr><td> 10% </td><td><input type="checkbox" id="myCheck9"  onclick="myFunction()" checked></td> <td> Add more than 5 new animated SNAP SVGs!</td></tr>
+</table>
+
+
+<script>
+myFunction();
+
+function myFunction() {
+
+  var checkBox0 = document.getElementById("myCheck0");
+  var checkBox1 = document.getElementById("myCheck1");
+  var checkBox2 = document.getElementById("myCheck2");
+  var checkBox3 = document.getElementById("myCheck3");
+  var checkBox4 = document.getElementById("myCheck4");
+  var checkBox5 = document.getElementById("myCheck5");
+  var checkBox6 = document.getElementById("myCheck6");
+  var checkBox7 = document.getElementById("myCheck7");
+  var checkBox8 = document.getElementById("myCheck8");
+  var checkBox9 = document.getElementById("myCheck9");
+
+  var score = 0;
+
+  if (checkBox0.checked == true){
+    score += 10;
+  }
+
+  if (checkBox1.checked == true){
+  	score += 10;
+  }
+
+  if (checkBox2.checked == true){
+  	score += 10;
+  }
+
+  if (checkBox3.checked == true){
+  	score += 10;
+  }
+
+  if (checkBox4.checked == true){
+    score += 10;
+  }
+
+  if (checkBox5.checked == true){
+    score += 10;
+  }
+
+  if (checkBox6.checked == true){
+    score += 10;
+  }
+
+  if (checkBox7.checked == true){
+    score += 10;
+  }
+
+  if (checkBox8.checked == true){
+    score += 10;
+  }
+
+  if (checkBox9.checked == true){
+    score += 10;
+  }
+
+
+  document.getElementById("text").innerHTML = score;
+  console.log('score = ' + score);
+
+
+  if (score >= 60) {
+    document.getElementById("kitty").innerHTML = '<img src="./images/Hello_Kitty.svg" height="100">' + '<br><br>excellent!';
+  } else {
+    document.getElementById("kitty").innerHTML = '<img src="./images/Hello_Kitty_black.svg" height="100">' + '<br><br>keep fighting!';
+  }
+
+  //text.append(score);
+
+}
+</script>
+
+
+</body>
+</html>
